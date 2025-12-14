@@ -16,9 +16,23 @@
             <main>
                 <div id="menu-container"></div>
             </main>
-            <footer>
+            <footer id="order-container">
                 <!-- div here -->
             </footer>
+        </div>
+        <div class="form-modal hidden" id="modal">
+            <div class="form-container">
+                <div class="title-form bold">Enter card details</div>
+                <form id="payment-form">
+                    <label for="fullName"class="labels">Enter your full name:</label>
+                    <input class="input" name="fullName" type="text" placeholder="Mickey Mouse" required>
+                    <label for="ccNumber"class="labels">Enter a valid credit card number:</label>
+                    <input class="input" name="ccNumber" type="text" id="card" placeholder="Enter card number" required pattern="^[0-9]{13,19}$">
+                    <label for="cvv" class="labels">Enter a valid 3 digit CVV code:</label>
+                    <input class="input" name="cvv"type="text" id="cvv" placeholder="123" required pattern="^[0-9]{3,4}$">
+                    <button type="submit" class="pay-btn bold" id="pay-btn" data-pay="pay" disabled>Pay</button>
+                </form>
+            </div>
         </div>
         <script src="index.js" type="module"></script>
     </body>
